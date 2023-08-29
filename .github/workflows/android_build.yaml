@@ -6,6 +6,9 @@ on:
       - development
 
 jobs:
+  prebuild:
+    flutter channel master
+    flutter upgrade
   build:
     runs-on: ubuntu-latest
 

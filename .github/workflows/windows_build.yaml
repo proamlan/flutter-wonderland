@@ -6,13 +6,12 @@ on:
       - development
 
 jobs:
-  prebuild:
-    flutter channel master
-    flutter upgrade
   build:
     runs-on: windows-latest
 
     steps:
+      - run: flutter channel master
+      - run: flutter upgrade
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
